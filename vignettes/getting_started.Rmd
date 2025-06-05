@@ -1,0 +1,283 @@
+---
+title: "Getting Started with GlobalTechAnalytics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with GlobalTechAnalytics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5
+)
+```
+
+```{r setup}
+library(GlobalTechAnalytics)
+library(dplyr)
+library(ggplot2)
+```
+
+## Introduction
+
+GlobalTechAnalytics is a comprehensive R package for workforce analytics and predictive modeling.
+This document will walk you through the basic functionality and get you started with analyzing your organization's talent data.
+
+## Quick Start
+
+### Generate Sample Data
+
+The package includes a data generation system that creates employee and project data for demonstration and testing purposes.
+
+```{r}
+# Generate sample data for demonstration
+sample_data <- generate_globaltech_data(n_employees = 500, n_projects = 25)
+
+# Explore the employee data structure
+str(sample_data$employees[1:5, 1:8])  # First 5 rows, 8 columns
+```
+
+### Key Features Overview
+
+```{r}
+# Summary of generated data
+cat("=== Sample Data Summary ===\n")
+cat("Employees:", nrow(sample_data$employees), "\n")
+cat("Projects:", nrow(sample_data$projects), "\n")
+cat("Departments:", length(unique(sample_data$employees$department)), "\n")
+cat("Attrition Rate:", round(mean(sample_data$employees$left_company) * 100, 1), "%\n")
+```
+
+## Interactive Dashboard
+
+### Launch the Dashboard
+
+The easiest way to explore your data is through the interactive Shiny dashboard:
+
+```{r, eval=FALSE}
+# Launch the interactive dashboard
+launch_dashboard()
+```
+
+This opens a web-based dashboard with: - **Executive Overview**: Key metrics and strategic insights - **Attrition Analysis**: Risk prediction and employee segmentation - **Resource Optimization**: Utilization analysis and capacity planning - **Project Analytics**: Delivery performance and success factors
+
+## Core Analytics Functions
+
+### 1. Attrition Prediction
+
+Build machine learning models to predict which employees are at risk of leaving:
+
+```{r}
+# Build attrition prediction model
+attrition_model <- build_attrition_model(sample_data$employees)
+
+# View model performance
+cat("Model AUC:", round(attrition_model$auc, 3), "\n")
+
+# View top risk factors
+head(attrition_model$feature_importance, 8)
+```
+
+### 2. Predict Individual Risk
+
+Use the trained model to assess specific employees:
+
+```{r}
+# Get predictions for high-risk employees
+#high_risk_employees <- sample_data$employees %>%
+#  filter(!left_company) %>%
+#  slice_head(n = 10)
+
+#risk_predictions <- predict_attrition_risk(attrition_model, high_risk_employees)
+#head(risk_predictions)
+```
+
+### 3. Resource Utilization Analysis
+
+Analyze how effectively your organization uses its human resources:
+
+```{r}
+# Analyze resource utilization
+utilization_analysis <- analyze_resource_utilization(
+  sample_data$employees, 
+  sample_data$projects
+)
+
+# View department efficiency
+utilization_analysis$department_utilization
+```
+
+### 4. Business Insights
+
+Generate executive-level insights and recommendations:
+
+```{r}
+# Generate comprehensive business insights
+insights <- generate_business_insights(
+  sample_data$employees, 
+  sample_data$projects
+)
+
+# View key metrics
+insights$key_metrics
+```
+
+```{r}
+# View executive summary
+cat(insights$executive_summary)
+```
+
+## Data Visualization Examples
+
+### Attrition Risk by Department
+
+```{r}
+# Create risk analysis visualization
+risk_by_dept <- sample_data$employees %>%
+  filter(!left_company) %>%
+  group_by(department) %>%
+  summarise(
+    employees = n(),
+    avg_risk = mean(attrition_risk_score),
+    high_risk_count = sum(attrition_risk_score > 0.7),
+    .groups = "drop"
+  )
+
+ggplot(risk_by_dept, aes(x = reorder(department, avg_risk), y = avg_risk)) +
+  geom_col(fill = "steelblue", alpha = 0.7) +
+  geom_text(aes(label = high_risk_count), hjust = -0.1) +
+  coord_flip() +
+  labs(
+    title = "Average Attrition Risk by Department",
+    x = "Department",
+    y = "Average Risk Score",
+    caption = "Numbers show count of high-risk employees"
+  ) +
+  theme_minimal()
+```
+
+### Performance vs Satisfaction Analysis
+
+```{r}
+# Analyze the relationship between performance and satisfaction
+perf_sat_data <- sample_data$employees %>%
+  filter(!left_company) %>%
+  mutate(
+    risk_level = case_when(
+      attrition_risk_score >= 0.7 ~ "High Risk",
+      attrition_risk_score >= 0.4 ~ "Medium Risk",
+      TRUE ~ "Low Risk"
+    )
+  )
+
+ggplot(perf_sat_data, aes(x = job_satisfaction, y = performance_rating, color = risk_level)) +
+  geom_point(alpha = 0.6, size = 2) +
+  scale_color_manual(values = c("Low Risk" = "green", "Medium Risk" = "orange", "High Risk" = "red")) +
+  labs(
+    title = "Performance vs Satisfaction by Risk Level",
+    x = "Job Satisfaction",
+    y = "Performance Rating",
+    color = "Attrition Risk"
+  ) +
+  theme_minimal()
+```
+
+## Working with Your Own Data
+
+### Required Data Format
+
+To use GlobalTechAnalytics with your own data, ensure your datasets include these key columns:
+
+#### Employee Data
+
+-   `employee_id`: Unique identifier
+-   `department`: Employee's department
+-   `tenure_years`: Years with company
+-   `job_satisfaction`: Rating (1-5 scale)
+-   `performance_rating`: Rating (1-5 scale)
+-   `age`: Employee age
+-   `base_salary`: Annual salary
+-   `left_company`: Boolean (TRUE if employee has left)
+
+#### Project Data
+
+-   `project_id`: Unique identifier
+-   `project_type`: Type of project
+-   `budget`: Project budget
+-   `start_date`: Project start date
+-   `planned_end_date`: Planned completion date
+-   `status`: Current status (Active, Completed, etc.)
+
+### Loading Your Data
+
+```{r, eval=FALSE}
+# Load your own data
+your_employees <- read.csv("your_employee_data.csv")
+your_projects <- read.csv("your_project_data.csv")
+
+# Validate data format
+validate_dataframe(your_employees, 
+                  c("employee_id", "department", "job_satisfaction"), 
+                  min_rows = 100)
+
+# Run analytics on your data
+your_model <- build_attrition_model(your_employees)
+your_insights <- generate_business_insights(your_employees, your_projects)
+```
+
+## Advanced Features
+
+### Custom Risk Thresholds
+
+```{r}
+# Analyze different risk thresholds
+risk_analysis <- sample_data$employees %>%
+  filter(!left_company) %>%
+  summarise(
+    high_risk_70 = sum(attrition_risk_score >= 0.7),
+    medium_risk_40_70 = sum(attrition_risk_score >= 0.4 & attrition_risk_score < 0.7),
+    low_risk_40 = sum(attrition_risk_score < 0.4),
+    total_cost_at_risk = sum(attrition_risk_score >= 0.7) * 75000
+  )
+
+risk_analysis
+```
+
+### Skills Analysis
+
+```{r}
+# Analyze skills distribution
+skills_analysis <- sample_data$employees %>%
+  filter(!left_company) %>%
+  select(department, skills) %>%
+  tidyr::separate_rows(skills, sep = ", ") %>%
+  count(skills, sort = TRUE) %>%
+  head(10)
+
+skills_analysis
+```
+
+## Next Steps
+
+1.  **Explore the Dashboard**: Launch `launch_dashboard()` for interactive exploration
+2.  **Read Advanced Guides**: Check out the analytics and modeling vignettes
+3.  **Customize for Your Needs**: Adapt the models and analyses for your specific use case
+4.  **Schedule Regular Analysis**: Set up automated reporting for ongoing insights
+
+## Getting Help
+
+```{r, eval=FALSE}
+# Get help on specific functions
+?build_attrition_model
+?generate_business_insights
+?launch_dashboard
+
+# View all package functions
+help(package = "GlobalTechAnalytics")
+```
+
+For more detailed documentation and examples, visit the [package website](https://github.com/Anna-KG/GlobalTechAnalytics).

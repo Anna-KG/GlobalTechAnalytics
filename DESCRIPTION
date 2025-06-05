@@ -1,0 +1,50 @@
+Package: GlobalTechAnalytics
+Title: Resource Analytics for GlobalTech Enterprises
+Version: 1.0.0
+Authors@R: 
+    person(
+      given  = "Anna",
+      family = "Kędzierska",
+      email  = "a.kedzierska@student.uw.edu.pl",
+      role   = c("aut", "cre")
+    )
+Description: Resource analytics platform with predictive models and interactive dashboards.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5.0)
+Imports:
+    dplyr,
+    tidyr,
+    randomForest,
+    pROC,
+    caret,
+    scales,
+    shiny,
+    stats,
+    R6,
+    lubridate,
+    purrr,
+    readr,
+    tibble,
+    DT,
+    shiny,
+    shinydashboard
+Suggests:
+    cluster,
+    corrplot,
+    factoextra,
+    ggplot2,
+    janitor,
+    plotly,
+    shinycssloaders,
+    stringr,
+    survival,
+    testthat (>= 3.0.0),
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
+URL: https://github.com/Anna-KG/GlobalTechAnalytics
+BugReports: https://github.com/Anna-KG/GlobalTechAnalytics/issues

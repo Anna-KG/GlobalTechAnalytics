@@ -1,0 +1,51 @@
+project_id,project_type,project_name,client_type,start_date,planned_end_date,budget,required_skills,team_size,status,delivered_on_time,budget_variance_pct,client_satisfaction,complexity_score,priority
+PROJ0001,Analytics Dashboard,Analytics Dashboard - Next,External,2024-08-26,2024-11-05,456318,"Python, SQL, Analytics",3,Completed,FALSE,-0.01596517809951241,4.249232416725026,6.01,10
+PROJ0002,Legacy Modernization,Legacy Modernization - Enterprise,External,2024-05-11,2024-10-08,1284979,"Java, Python, AWS",9,Completed,FALSE,0.15864707561232633,1.9971951433647723,4.74,8
+PROJ0003,Analytics Dashboard,Analytics Dashboard - Delta,External,2024-10-11,2025-01-21,233842,"Python, SQL, Analytics",3,Completed,TRUE,0.17186887010153098,3.711698348513994,1.24,8
+PROJ0004,Legacy Modernization,Legacy Modernization - Advanced,External,2024-09-28,2025-02-09,673033,"Java, Python, AWS",4,Completed,TRUE,-0.14245882126817752,3.0145766071658695,8.32,3
+PROJ0005,Cloud Migration,Cloud Migration - Advanced,External,2024-06-10,2024-09-21,1351007,"AWS, Docker, Kubernetes, Python",10,Completed,TRUE,0.12188224256830593,3.489599409620897,4.33,7
+PROJ0006,Security Enhancement,Security Enhancement - Core,Internal,2023-06-19,2023-07-24,486358,"Security Testing, Python",3,Completed,TRUE,0.06511153938794077,4.481029479848204,7.66,4
+PROJ0007,Data Pipeline,Data Pipeline - Advanced,External,2023-07-21,2023-08-02,702108,"Python, SQL, AWS",5,Completed,TRUE,-0.09472755641227251,1.7012094527256967,2.17,1
+PROJ0008,Mobile App,Mobile App - Gamma,External,2023-07-07,2023-08-21,474614,"React, JavaScript, UI/UX Design",3,Completed,TRUE,0.13943602872179708,3.979943195831162,5.62,4
+PROJ0009,Analytics Dashboard,Analytics Dashboard - Core,External,2025-05-28,2025-06-20,539040,"Python, SQL, Analytics",3,Active,NA,NA,NA,4.35,7
+PROJ0010,Web Application,Web Application - Smart,External,2023-07-13,2023-09-22,688236,"JavaScript, React, Node.js, Python",5,Completed,FALSE,0.21830078832370045,4.3716196738181345,5.81,8
+PROJ0011,Data Pipeline,Data Pipeline - Core,Internal,2023-12-13,2024-06-18,675017,"Python, SQL, AWS",5,Completed,FALSE,-0.036261134525218675,3.775692830590512,6.18,6
+PROJ0012,Legacy Modernization,Legacy Modernization - Core,Internal,2023-07-29,2024-02-22,1475236,"Java, Python, AWS",9,Completed,FALSE,0.4249572471915689,4.243750978145414,3.73,6
+PROJ0013,Web Application,Web Application - Gamma,External,2024-04-19,2024-05-24,888972,"JavaScript, React, Node.js, Python",5,Completed,FALSE,0.11621450371808259,5,8.24,3
+PROJ0014,Security Enhancement,Security Enhancement - Pro,External,2024-06-13,2024-08-04,615947,"Security Testing, Python",4,Cancelled,NA,NA,NA,4.62,6
+PROJ0015,Infrastructure,Infrastructure - Beta,Internal,2024-10-22,2024-12-07,909581,"AWS, Docker, Kubernetes",6,Completed,TRUE,0.09422909464444781,3.9150926233000187,8.16,1
+PROJ0016,Cloud Migration,Cloud Migration - Pro,Internal,2024-06-30,2024-10-03,913598,"AWS, Docker, Kubernetes, Python",7,Completed,TRUE,0.061288332410301405,3.0164512483631314,3.89,9
+PROJ0017,API Development,API Development - Core,Internal,2025-04-01,2025-07-13,416874,"Python, Node.js, API Testing",3,Active,NA,NA,NA,5.35,7
+PROJ0018,Web Application,Web Application - Core,Internal,2023-09-14,2023-11-11,707328,"JavaScript, React, Node.js, Python",5,Completed,FALSE,0.15245638821670268,4.000296306632679,1.35,7
+PROJ0019,API Development,API Development - Pro,External,2024-02-11,2024-05-09,426434,"Python, Node.js, API Testing",3,Completed,TRUE,0.06733468230710857,3.2238618032318507,3.3,8
+PROJ0020,Infrastructure,Infrastructure - Alpha,External,2024-10-04,2025-03-23,872202,"AWS, Docker, Kubernetes",7,Completed,FALSE,0.17317988760335246,3.5410907336912394,6.32,8
+PROJ0021,AI/ML Platform,AI/ML Platform - Core,External,2025-01-26,2025-05-20,1538159,"Python, Machine Learning, TensorFlow, Statistics",10,Completed,FALSE,0.17952287541849565,1,5.36,6
+PROJ0022,Data Pipeline,Data Pipeline - Pro,Internal,2023-08-03,2023-10-09,428521,"Python, SQL, AWS",3,Completed,FALSE,0.20202057809889734,2.7985627972205727,9.42,7
+PROJ0023,Legacy Modernization,Legacy Modernization - Enterprise,Internal,2024-11-15,2025-03-06,1039483,"Java, Python, AWS",6,Completed,TRUE,-0.1303895627843422,3.8569343110125063,1.51,1
+PROJ0024,Mobile App,Mobile App - Enterprise,External,2024-12-31,2025-04-10,384490,"React, JavaScript, UI/UX Design",3,Completed,FALSE,0.23144452964850482,5,1.09,6
+PROJ0025,AI/ML Platform,AI/ML Platform - Next,External,2024-06-10,2025-06-08,1215698,"Python, Machine Learning, TensorFlow, Statistics",8,Active,NA,NA,NA,4.7,5
+PROJ0026,API Development,API Development - Advanced,External,2024-11-10,2025-02-03,327357,"Python, Node.js, API Testing",3,Completed,FALSE,0.0170928237021903,2.863834594035252,6.82,4
+PROJ0027,Security Enhancement,Security Enhancement - Advanced,External,2023-12-14,2024-02-10,748241,"Security Testing, Python",5,Completed,FALSE,-0.006253613804423436,4.250014623665256,3.55,3
+PROJ0028,Legacy Modernization,Legacy Modernization - Pro,External,2024-04-04,2025-01-28,784934,"Java, Python, AWS",4,Completed,TRUE,0.07808612182414926,3.7066181083556295,7.94,9
+PROJ0029,Security Enhancement,Security Enhancement - Beta,External,2024-09-14,2024-11-22,787264,"Security Testing, Python",6,Completed,TRUE,-0.027301192225200114,3.180718411610877,4.42,10
+PROJ0030,Analytics Dashboard,Analytics Dashboard - Enterprise,External,2024-07-30,2024-10-02,277392,"Python, SQL, Analytics",3,Cancelled,NA,NA,NA,5.02,10
+PROJ0031,Analytics Dashboard,Analytics Dashboard - Gamma,Internal,2024-12-23,2025-03-29,265792,"Python, SQL, Analytics",3,Completed,TRUE,-0.15828789038090393,3.383282216913509,5.15,7
+PROJ0032,Cloud Migration,Cloud Migration - Delta,Internal,2023-12-10,2024-10-03,1279448,"AWS, Docker, Kubernetes, Python",9,Completed,FALSE,-0.16704178199746053,4.0876909027504995,2.59,6
+PROJ0033,Analytics Dashboard,Analytics Dashboard - Alpha,Internal,2025-03-23,2025-06-02,293780,"Python, SQL, Analytics",3,Completed,TRUE,-0.023851189097550598,5,2.54,9
+PROJ0034,Infrastructure,Infrastructure - Alpha,External,2024-01-07,2024-02-12,953049,"AWS, Docker, Kubernetes",7,Completed,TRUE,0.1869800798392776,3.4798173635258114,5.58,6
+PROJ0035,Infrastructure,Infrastructure - Smart,Internal,2024-05-07,2024-08-27,681851,"AWS, Docker, Kubernetes",5,Completed,TRUE,0.003721336638196255,4.723870695353765,2.82,1
+PROJ0036,AI/ML Platform,AI/ML Platform - Advanced,Internal,2024-11-02,2024-11-27,1200903,"Python, Machine Learning, TensorFlow, Statistics",8,Completed,TRUE,-0.0018878154068223338,3.741934405665371,9.4,6
+PROJ0037,Security Enhancement,Security Enhancement - Smart,External,2024-04-17,2024-06-17,556983,"Security Testing, Python",3,Completed,TRUE,0.13840536372678167,4.021247859291443,1.73,6
+PROJ0038,Mobile App,Mobile App - Delta,External,2023-12-10,2024-05-21,542686,"React, JavaScript, UI/UX Design",3,Completed,FALSE,0.14720791454189439,2.3474039988718216,9.92,3
+PROJ0039,Mobile App,Mobile App - Smart,External,2023-07-16,2024-03-16,688448,"React, JavaScript, UI/UX Design",5,Cancelled,NA,NA,NA,8.35,5
+PROJ0040,API Development,API Development - Delta,External,2024-11-25,2025-01-02,544430,"Python, Node.js, API Testing",4,Completed,FALSE,0.44769670404240214,3.066399615080985,9.51,5
+PROJ0041,Mobile App,Mobile App - Advanced,External,2024-02-17,2024-07-11,525635,"React, JavaScript, UI/UX Design",4,Completed,TRUE,0.015304152488355725,3.5290115133741313,9.18,7
+PROJ0042,Analytics Dashboard,Analytics Dashboard - Smart,Internal,2023-06-25,2023-11-17,530057,"Python, SQL, Analytics",4,Cancelled,NA,NA,NA,3.61,5
+PROJ0043,Cloud Migration,Cloud Migration - Gamma,Internal,2023-07-10,2024-06-30,1304390,"AWS, Docker, Kubernetes, Python",8,Completed,FALSE,0.18391456478137957,5,2.39,3
+PROJ0044,Data Pipeline,Data Pipeline - Delta,External,2023-11-30,2023-12-22,525294,"Python, SQL, AWS",4,Completed,TRUE,0.030908947592198324,2.666907984497731,9.55,2
+PROJ0045,Legacy Modernization,Legacy Modernization - Core,External,2024-05-26,2025-05-24,634280,"Java, Python, AWS",4,Completed,TRUE,0.04319548340975035,3.5924610620409156,4.15,4
+PROJ0046,Data Pipeline,Data Pipeline - Core,Internal,2023-09-26,2023-10-10,430696,"Python, SQL, AWS",3,Completed,TRUE,0.10584028467237665,3.9473498075092057,5.4,5
+PROJ0047,Infrastructure,Infrastructure - Enterprise,External,2024-11-16,2025-09-04,1017248,"AWS, Docker, Kubernetes",7,Active,NA,NA,NA,8.89,10
+PROJ0048,Analytics Dashboard,Analytics Dashboard - Advanced,External,2024-01-18,2024-03-31,447316,"Python, SQL, Analytics",3,Completed,FALSE,0.29716274531280357,3.955777018299296,4.25,1
+PROJ0049,Analytics Dashboard,Analytics Dashboard - Enterprise,External,2023-07-11,2023-08-07,352745,"Python, SQL, Analytics",3,Completed,TRUE,-0.027212119391316122,3.3649123611747314,7.95,1
+PROJ0050,Web Application,Web Application - Core,External,2024-10-08,2024-12-10,900344,"JavaScript, React, Node.js, Python",7,Cancelled,NA,NA,NA,8.36,1
